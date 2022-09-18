@@ -1,0 +1,95 @@
+@import '../animations';
+
+#about-me
+{
+    @include section-light;	
+
+    .container
+    {
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        .image-container
+        {
+            opacity:0;
+            img 
+            {
+                align-self: center;
+                max-width: 300px;
+            }
+        }
+
+        #about-me-text
+        {   
+            opacity:0;
+            align-self: center;    
+            p 
+            {
+                text-align:left;
+            }
+
+        }
+
+    }
+
+    &.animate
+    {
+        
+        .container
+        {
+            .image-container
+            {
+                animation: fade-in 3s ease both;
+                opacity:1;
+
+            }
+            #about-me-text
+            {
+                animation: fade-in 3s ease forwards;
+                opacity:1
+            }
+        }
+    }
+}
+
+
+@media (min-width : $media_medium)
+{
+    #about-me 
+    {
+        .container
+        {
+            flex-direction: row;
+        }
+    }
+
+}
+
+@media (min-width : $media_large)
+{
+    #about-me
+    {
+        height: 100vh;
+        display:flex;
+        align-items: center;   
+    }
+}
+
+@media (min-width : $media_xlarge)
+{
+    #about-me
+    {
+        .container
+        {
+            .image-container
+            {
+                
+                img 
+                {
+                    max-width: 450px;
+                };
+            }
+        }
+
+    }
+}

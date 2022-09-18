@@ -1,0 +1,94 @@
+@keyframes fade-in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes fly-in-left 
+{
+    from{
+        transform:translateX(-100vw)};
+    to{
+        transform:translateX(0)};
+}
+
+@keyframes fly-in-right
+{
+    from{
+        transform:translateX(100vw)};
+    to{
+        transform:translateX(0)};
+}
+
+
+@keyframes html-animation {
+    from{width:0%;}
+    to{width:89%}
+}
+
+@keyframes css-animation {
+    from{width:0%;}
+    to{width:78%}
+}
+
+@keyframes js-animation {
+    from{width:0%;}
+    to{width:82%}
+}
+
+@keyframes csharp-animation {
+    from{width:0%;}
+    to{width:75%}
+}
+
+@keyframes react-animation {
+    from{width:0%;}
+    to{width:15%}
+}
+
+@keyframes bs-animation {
+    from{width:0%;}
+    to{width:25%}
+}
+
+@keyframes sql-animation {
+    from{width:0%;}
+    to{width:45%}
+}
+
+@keyframes git-animation {
+    from{width:0%;}
+    to{width:35%}
+}
+
+@keyframes agile-animation {
+    from{width:0%;}
+    to{width:45%}
+}
+
+@keyframes ps-animation {
+    from{width:0%;}
+    to{width:75%}
+}
+
+@keyframes ai-animation {
+    from{width:0%;}
+    to{width:85%}
+}
+
+@keyframes xd-animation {
+    from{width:0%;}
+    to{width:80%}
+}

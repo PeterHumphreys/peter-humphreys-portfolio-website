@@ -1,0 +1,104 @@
+@import './utilities';
+
+body.scroll-disabled
+{
+    height:100vh;
+    overflow:hidden;
+}
+
+section
+{
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+}
+
+#about-me, #my-skills, #my-work, #contact-me, #footer-content
+{
+        a
+        {
+            pointer-events: none;
+        }
+        &.animate
+        {
+            a
+            {
+                pointer-events: all;
+            }
+        }
+}
+
+//Sections with background Image
+@mixin section-bg
+{
+	background:$gradient_bg;
+	background-size:cover;
+	background-repeat:no-repeat;
+    background-attachment: fixed;
+
+    svg path
+    {
+        fill:  $color_white
+    }
+
+    & > *
+    {
+        color:$color_white;
+    }
+
+}
+
+//Sections with dark background
+@mixin section-dark
+{
+    background:$color_primary;
+    svg path
+    {
+        fill:  $color_white
+    }
+    & > *
+    {
+        color:$color_white;
+    }
+
+}
+
+//Sections with dark background
+@mixin section-dark-alt
+{
+    background:$gradient_primary;
+    svg path
+    {
+        fill:  $color_white
+    }
+    & > *
+    {
+        color:$color_white;
+    }
+
+}
+
+//Sections with light background
+@mixin section-light
+{
+	background:$color_white;
+	color:$color_secondary;
+    svg path
+    {
+        fill:  $color_primary
+    }
+
+    & > *
+    {
+        color: $color_primary;;
+    }
+
+    h2 
+    {
+        text-shadow:none;
+        color: $color_primary;
+    }
+
+}
+
+
+

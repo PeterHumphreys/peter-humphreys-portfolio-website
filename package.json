@@ -1,0 +1,23 @@
+{
+  "name": "portfolio_website_2022",
+  "version": "1.0.0",
+  "description": "Peter Humphrey's Portfolio Website 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "concat": "^1.0.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "imagemin": "^7.0.0",
+    "node-sass": "^7.0.3"
+  }
+}

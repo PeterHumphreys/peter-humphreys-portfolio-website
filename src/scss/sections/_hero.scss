@@ -1,0 +1,81 @@
+
+#hero
+{
+    @include section-bg;
+    .container
+    {
+        @include vertical-center;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        #image-container
+        {
+            @include horizontal-block-center;
+            @include vertical-center;
+            order: 1;
+            padding: 1.5rem;
+            img 
+            {
+                @include img-fluid;
+                box-shadow: $box_shadow_1;
+                border-radius: 50%;
+            }  
+        }
+
+        #greeting-container
+        {
+            @include vertical-center;
+            @include horizontal-inline-center;
+            order: 2;
+            padding: 1.5rem;
+            h1 
+            {
+                line-height: 4rem;
+            }
+            & > *
+            {
+                vertical-align: middle;
+            }
+        }
+        .btn
+        {
+            display: inline-block;
+            font-size: 25px;
+        }
+    }
+}
+@media (min-width : $media_medium)
+{
+    #hero
+    {
+        h1 
+        {
+            font-size: 40px;
+        }
+        height: 100vh;
+    }
+
+}
+
+@media (min-width : $media_large)
+{
+    #hero
+    {
+        height: 100vh;  
+        .container
+        {
+            height: 100vh;  
+            flex-direction: row;
+            #image-container
+            {
+                order:2;
+            }
+
+            #greeting-container
+            {
+                order: 1;
+            }
+        }
+    }
+    
+}

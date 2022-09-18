@@ -1,0 +1,36 @@
+@import '../animations';
+
+#my-work
+{
+    @include section-dark-alt;
+    min-height:100vh;
+    .container
+    {
+        opacity:0;
+        p 
+        {
+            padding:1.5em;
+        }
+
+    }
+    &.animate
+    {
+        .container
+        {
+            opacity:0;
+            animation:fade-in 2s forwards;
+        }
+        
+    }
+
+}
+
+@media (min-width : $media_medium)
+{
+
+}
+
+@media (min-width : $media_large)
+{
+    
+}

@@ -1,0 +1,66 @@
+form
+{
+    padding-top:15px;
+    padding-bottom:75px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:2%;
+
+    
+    .input-group
+    {
+        flex: 48%;
+    }
+
+    .textarea-group
+    {
+        flex:100%
+    }
+
+    input, textarea{
+        letter-spacing: 1px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        width:100%;
+        background-color:transparent;
+        border:$border_white;
+        padding:1em
+
+    }
+    
+    textarea{
+        height:220px;
+        margin-top:2em;
+    }
+    input, select, textarea{
+        color: #fff;
+    
+    }
+    
+    ::placeholder
+    {
+        font-weight: 100;
+        color: rgba(255,255,255,.85);
+    }
+    
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: rgba(255,255,255,.85);
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: rgba(255,255,255,.85);
+        opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: rgba(255,255,255,.85);
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: rgba(255,255,255,.85);
+    }
+
+    .error-text
+    {
+        color:red;
+        opacity:0;
+    }
+}

@@ -1,0 +1,70 @@
+//Colors
+$color_primary : rgb(27, 54, 100);
+$color_primary_transparent : rgba(27, 54, 100, .95);
+$color_secondary : rgb(0, 88, 128);
+$color_secondary_transparent : rgba(0, 88, 128, .95);
+$color_tertiary:rgba(104, 127, 155,1);
+$color_tertiary_transparent:rgba(104, 127, 155,.35);
+$color_highlight : rgb(255, 102, 102);
+$color_highlight_transparent : rgba(255, 102, 102, .5);
+$color_white : rgb(255, 255, 255);
+$color_modal_background:rgba(0,0,0,.8);
+$color_modal_button:rgba(0,155,155,.8);
+
+//Gradients
+$gradient_primary : linear-gradient($color_primary, $color_secondary);
+$gradient_primary_semi_transparent : linear-gradient($color_primary_transparent, $color_secondary_transparent);
+$gradient_bg : linear-gradient(to bottom,$color_secondary_transparent, $color_primary_transparent 100%),url("../images/code-background.jpg");
+//Borders
+$border_white : 1px solid $color_white;
+$border_primary : 1px solid $color_primary;
+//Shadows
+$text_shadow_1 : 1px 1px 1px #000;
+$text_shadow_2 : 2px 2px 2px #000;
+$box_shadow_1 : 2px 2px 2px #000;
+//Media Queries
+$media_small : 576px;
+$media_medium: 768px;
+$media_large : 992px;
+$media_xlarge : 1200px;
+
+//Universal Styles
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+//Get rid of obnoxious black line around inputs/textareas in Chrome
+*, *:focus, *:hover {
+    outline: none;
+}
+
+//Smooth Scrolling
+html 
+{
+    scroll-behavior: smooth;
+    height:100%;
+}
+
+body{
+    height:100%;
+}
+
+ul, ol 
+{
+    list-style-type: none;
+}
+
+a, li , i
+{
+    text-decoration: none;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s;
+	transition: all ease .5s;
+}
+
+.icon{
+	width:40px;
+}

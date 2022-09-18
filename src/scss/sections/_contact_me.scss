@@ -1,0 +1,37 @@
+
+@import '../animations';
+
+section#contact-me
+{
+    @include section-bg;
+    padding-bottom: 0 !important;
+
+    .container
+    {
+        opacity:0;
+    }
+    .cls-1
+    {
+        fill:$color_tertiary;
+        opacity:.35;
+    }
+    &.animate
+    {
+        .container
+        {
+            animation:fade-in 1s forwards;
+            opacity:1;
+        }
+    }
+
+}
+
+@media (min-width : $media_medium)
+{
+
+}
+
+@media (min-width : $media_large)
+{
+    
+}

@@ -1,0 +1,117 @@
+@import '../animations';
+
+footer
+{
+    @include section-bg;
+    text-align: center;
+    padding-top:3rem;
+    padding-bottom:0;
+    color:$color_white;
+    .footer-content
+    {
+        background : $color_tertiary_transparent;
+        text-shadow:$text_shadow_1;
+        .container
+        {
+            max-width:500px;
+            display:flex;
+            flex-direction: column;
+            gap:50px;
+            opacity: 0;
+            div 
+            {
+                flex-basis:100%;
+                &#personal-info
+                {
+                    ul 
+                    {
+                        hr{
+                            border: 1px solid $color_white;
+                            margin:1em auto 1em auto;
+                            width:30%
+                        }
+                    } 
+                }
+
+                &#links
+                {
+                    display:flex;
+                    flex-wrap: wrap;
+                    gap:15px;
+
+                    a 
+                    {
+                        display:flex;
+                        align-content: center;
+                        margin:auto;
+                        &.professional-link
+                        {                    
+                            width:30px;
+                            height:30px;
+                            &:hover i 
+                            {
+                                color:$color_highlight;
+                            }
+                            i 
+                            {
+                                -webkit-transition: all ease 0.5s;
+                                -moz-transition: all ease 0.5s;
+                                transition: all ease 0.5s;
+                                color:$color_white;
+                                margin:auto;
+                                font-size:40px;
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+        &.animate
+        {
+            .container
+            {
+                animation: fade-in 1s forwards;
+                opacity:1;
+            }
+        }
+        p.footer-copyright
+        {
+            color:$color_white;
+            padding:.5em 1em 1em 1em;
+        }
+    }
+
+
+
+}
+
+@media (min-width : $media_medium)
+{
+
+    footer
+    {
+        .container
+        {
+            max-width: 1140px
+        }
+    }
+}
+
+@media (min-width : $media_large)
+{
+    footer
+    {
+        .footer-content
+        {
+            .container
+            {
+
+            }
+        }
+
+    }
+    
+}

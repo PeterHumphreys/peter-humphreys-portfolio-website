@@ -1,0 +1,185 @@
+@import '../animations'; 
+//Gallery
+.gallery
+{
+    display:grid;
+    grid-gap: 15px;
+    .gallery-item
+    {
+        display: none;
+        transition:1s;
+        position: relative;
+        overflow: hidden;
+        background-color:$color_primary;
+        opacity:1;
+        &.active
+        {
+            animation: fade-in 1s ease forwards;
+            display:inline-block;
+            opacity:1;
+            transform: translateX(0);
+            &.inactive
+            {
+                
+                animation: fade-out 1s ease forwards;
+            }
+        }
+
+    
+        a
+        {
+            & > *
+            {
+                -webkit-transition: all ease 1s;
+                -moz-transition: all ease 1s;
+                transition: all ease 1s;
+            }
+            &:hover
+            {
+                cursor:pointer;
+            }
+
+            img
+            {
+                transition:.6s;
+                height:100%;
+                max-height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        
+            .overlay-text-container
+            {
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align:center;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width:100%;
+                color:#fff;
+                position: absolute;
+                margin: 0;
+                padding:30px;
+                opacity:0;
+            }
+
+            &:hover
+            {
+                img
+                {
+                    scale:1.25;
+                    opacity: .05;
+                }
+                .overlay-text-container
+                {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.filter-list
+{
+    text-align: center;
+    padding-bottom:15px;
+    .filter
+    {
+        font-family: 'Bebas Neue', cursive;
+    }
+}
+
+@media (min-width: $media_medium)
+{
+    .gallery
+    {
+        aspect-ratio: 1;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        
+        .gallery-item.active
+        {
+            //Default SWTC  
+           &.item-a
+            {
+                grid-column:1/4;
+                grid-row:1/3;
+            }
+            //Default Sherwin-Willliams
+            &.item-b
+            {
+                grid-column:4/6;
+                grid-row:1/3;
+            }
+            ////Default Organic Farms
+            &.item-c
+            {
+                grid-column:6/8;
+                grid-row:1/3;
+            }
+            //Default Ray-Ban
+            &.item-d
+            {
+                grid-column:1/3;
+                grid-row:3/6;
+            }
+            //Default Forever Bank and Trust
+            &.item-e
+            {
+                grid-column:3/6;
+                grid-row:3/5;
+            }
+            //Default Majestic
+            &.item-f
+            {
+                grid-column:6/8;
+                grid-row:3/5;
+            }
+            //Default Low-Poly
+            &.item-g
+            {
+            }
+            //Default Studdy Buddy
+            &.item-h
+            {
+            }
+            //Default Lyric Poster
+            &.item-i
+            {
+                grid-column:1/3;
+            }
+            
+            //Default Infinitum
+            &.item-j
+            {
+                grid-column: 3/5;
+                grid-row:6/8;
+
+            }
+            
+            //Default Skipper
+            &.item-k
+            {
+                grid-column:1/3;
+            }
+            //Default Sprinkles
+            &.item-l
+            {
+                grid-column:5/8;
+                grid-row: 5/8;
+            }
+            
+
+        }
+    }
+}
+
+@media (min-width: $media_large)
+{
+}
+
+
+
