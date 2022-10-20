@@ -8,44 +8,50 @@
         opacity:0;
         .skills-container
         {
+            margin-top:15px;
+            & > *
+            {
+                flex:1;
+            }
             div
             {
                 .skills-item
                 {
-                    display:flex;
-                    gap:15px;
-                    justify-content: center;
-                    margin-bottom:15px;
+                    position:relative;
+                    .skills-bg
+                    {
+                        height:100%;
+                        position:absolute;
+                        left:0;
+
+                    }
+                    .skills-wrapper
+                    {
+                        display:flex;
+                        gap:15px;
+                        justify-content: center;
+                        margin-bottom:15px;
+                        padding:10px;
+                        backdrop-filter: blur(10px);
+
 
                     img 
                     {
                         width:80px;
+                    }
+
+                    h3 
+                    {
+                        font-size:30px;
+                        letter-spacing: 2px;
                     }
                     .skills-item-content
                     {
                         flex-basis:75%;
                         margin-top:auto;
                         margin-bottom:auto;
-
-                        .rectangle
-                        {
-                            vertical-align:center;
-                            display:block;
-                            height:20px;
-                            background:rgba(255,255,255,.25);
-                            position:relative;
-                            border-radius: 15px;
-            
-                            .skill-level
-                            {
-                                left:0;
-                                height:100%;
-                                position:absolute;
-                                background-color:rgba(255,255,255,.45);
-                                border-radius: 15px 0 0 15px;
-                            }
-                        }
                     }
+                }
                 }
             }
 
@@ -61,101 +67,33 @@
             opacity:1;
             .skills-container
             {
-                .skills-item.animate
+                div.left
                 {
-                    .skills-item-content
+                    .skills-item.animate
                     {
-                        .rectangle
+                        .skills-bg
                         {
-                            .skill-level
-                            {
-                                &#html
-                                {
-                                    animation-name: html-animation;
-                                    animation-duration: 1s;
-                                    width:89%;
-                                }
-
-                                &#css
-                                {
-                                    animation-name: css-animation;
-                                    animation-duration: 1s;
-                                    width:78%;
-                                }
-
-                                &#javascript
-                                {
-                                    animation-name: js-animation;
-                                    animation-duration: 1s;
-                                    width:82%;
-                                }
-
-                                &#csharp
-                                {
-                                    animation-name: csharp-animation;
-                                    animation-duration: 1s;
-                                    width:75%;
-                                }
-
-                                &#bootstrap
-                                {
-                                    animation-name: bs-animation;
-                                    animation-duration: 1s;
-                                    width:25%;
-                                }
-
-                                &#react
-                                {
-                                    animation-name: react-animation;
-                                    animation-duration: 1s;
-                                    width:15%;
-                                }
-
-                                &#sql
-                                {
-                                    animation-name: sql-animation;
-                                    animation-duration: 1s;
-                                    width:45%;
-                                }
-
-                                &#git
-                                {
-                                    animation-name: git-animation;
-                                    animation-duration: 1s;
-                                    width:35%;
-                                }
-
-                                &#agile
-                                {
-                                    animation-name: agile-animation;
-                                    animation-duration: 1s;
-                                    width:45%;
-                                }
-
-                                &#photoshop
-                                {
-                                    animation-name: ps-animation;
-                                    animation-duration: 1s;
-                                    width:75%;
-                                }
-
-                                &#illustrator
-                                {
-                                    animation-name: ai-animation;
-                                    animation-duration: 1s;
-                                    width:85%;
-                                }
-
-                                &#xd
-                                {
-                                    animation-name: xd-animation;
-                                    animation-duration: 1s;
-                                    width:80%;
-                                }
-                            }
+                            width:100%;
+                            animation-name: skills-item-animation;
+                            animation-duration: 1.5s;
+                            background:$gradient_prism;
                         }
                     }
                 }
+                div.right
+                {
+                    .skills-item.animate
+                    {
+                        .skills-bg
+                        {
+                            width:100%;
+                            animation-name: skills-item-animation;
+                            animation-duration: 1.5s;
+                            background:$gradient_prism_reverse;
+                        }
+                    }
+                }
+
             }
         }
 
@@ -171,11 +109,9 @@
         {
             display: flex;
             gap:2%;
-            flex-wrap:wrap;
             width: 100%;
             div 
             {
-                flex-basis:48%;
 
                 .skills-item
                 {

@@ -15,6 +15,9 @@ $color_modal_button:rgba(0,155,155,.8);
 $gradient_primary : linear-gradient($color_primary, $color_secondary);
 $gradient_primary_semi_transparent : linear-gradient($color_primary_transparent, $color_secondary_transparent);
 $gradient_bg : linear-gradient(to bottom,$color_secondary_transparent, $color_primary_transparent 100%),url("../images/code-background.jpg");
+$gradient_prism : linear-gradient(90deg,rgba(white,.1), rgba($color_highlight, .15),rgba(orange, .15), rgba(yellow, .15), rgba(lightgreen, .15), rgba($color_secondary, .5));
+$gradient_prism_reverse : linear-gradient(to left,rgba(white,.1), rgba($color_highlight, .15),rgba(orange, .15), rgba(yellow, .15), rgba(lightgreen, .15),  rgba($color_secondary, .5));
+
 //Borders
 $border_white : 1px solid $color_white;
 $border_primary : 1px solid $color_primary;

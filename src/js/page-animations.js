@@ -24,15 +24,24 @@ function animateMySkills()
     if (percentageInViewPort(mySkillsEl, .5) && (!mySkillsEl.classList.contains("animate")))
     {
             mySkillsEl.classList.add("animate");
-            //Wait for fly in animation to finish executing, then add class for progress bar animation
+            //Wait for fly in animation to finish executing, then add class for left animation
             setTimeout(()=> 
             {
-                const skillsItemEls = document.querySelectorAll(".skills-item");
+                const skillsItemEls = document.querySelectorAll(".left .skills-item");
                 skillsItemEls.forEach(el => 
                     {
                         el.classList.add("animate")
                     })
-            }, 500)
+            }, 500);
+            //Wait for left animation to finish executing, then add class for right animation
+            setTimeout(()=> 
+            {
+                const skillsItemEls = document.querySelectorAll(".right .skills-item");
+                skillsItemEls.forEach(el => 
+                    {
+                        el.classList.add("animate")
+                    })
+            }, 1500);
     }
 }
 
