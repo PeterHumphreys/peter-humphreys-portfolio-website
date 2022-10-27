@@ -10,10 +10,24 @@ toggleBtn.addEventListener("click", () =>
 {
     document.body.classList.toggle("scroll-disabled");
     nav.classList.toggle("active");
-    toggleIcon.classList.toggle("fa-bars")
-    toggleIcon.classList.toggle("fa-times")
+    toggleIcon.classList.toggle("fa-bars");
+    toggleIcon.classList.toggle("fa-times");
 })
 
+window.addEventListener("resize", () => 
+{
+    handleScroll();
+    //If mobile nav is open, reset
+    if (window.innerWidth > MEDIA_LARGE)
+    {
+        //let user scroll
+        document.body.classList.remove("scroll-disabled");
+        //close mobile nav
+        nav.classList.remove("active");
+        toggleIcon.classList.remove("fa-times");
+        toggleIcon.classList.add("fa-bars");
+    }
+})
 window.addEventListener("scroll", handleScroll)
 window.addEventListener("load", handleScroll);
 
