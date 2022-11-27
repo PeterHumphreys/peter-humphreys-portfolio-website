@@ -806,15 +806,15 @@
                 <h2><img src="images/icons/contact-me-icon.svg" alt="Contact Me Icon">&nbsp;Contact Me</h2>
                 <form id="contact" action="php/form_process.php" method="post">
                     <div class="input-group">
-                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="name" id="name-field" placeholder="Name" required>
                     </div>
                     <div class="input-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="email" name="email" id="email-field" placeholder="Email Address" required>
                     </div>
                     <div class="textarea-group">
-                        <textarea type="text" name="message" placeholder="Your Message" required></textarea>
+                        <textarea type="text" name="message" id="message-field" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn-transparent">Submit</button>
+                    <button type="submit" class="btn-transparent" id="submit-btn">Submit</button>
                 </form>
             </div>
             <svg preserveAspectRatio="none" viewBox="0 0 1500 50" height="35" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-arrow-white" style="display:block">
