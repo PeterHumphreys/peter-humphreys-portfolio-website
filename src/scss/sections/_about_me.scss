@@ -26,6 +26,15 @@
             p 
             {
                 text-align:left;
+                a 
+                {
+                    color: $color_primary;
+                    text-decoration: underline;
+                    &:hover
+                    {
+                        color: $color_highlight !important;
+                    }
+                }
             }
 
         }
