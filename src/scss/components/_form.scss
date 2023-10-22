@@ -6,9 +6,13 @@ form
     flex-wrap:wrap;
     gap:2%;
 
-    
     .input-group
     {
+        &:nth-child(1)
+        {
+            position:absolute;
+            left:-8000px;
+        }
         flex: 48%;
     }
 

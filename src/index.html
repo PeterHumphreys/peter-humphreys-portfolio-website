@@ -804,9 +804,12 @@
         <section id="contact-me">
             <div class="container">
                 <h2><img src="images/icons/contact-me-icon.svg" alt="Contact Me Icon">&nbsp;Contact Me</h2>
-                <form id="contact" action="php/form_process.php" method="post">
+                <form id="contact">
                     <div class="input-group">
-                        <input type="text" name="name" id="name-field" placeholder="Name" required>
+                        <input type="text" name="name" id="name-field" placeholder="Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="name_2" id="name-field-2" placeholder="Name">
                     </div>
                     <div class="input-group">
                         <input type="email" name="email" id="email-field" placeholder="Email Address" required>
